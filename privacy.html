@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — AutoClips</title>
+<meta name="description" content="Privacy Policy for AutoClips: how the app handles your clips, Google/YouTube credentials, Discord webhooks, and what it never collects.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #e6edf3; line-height: 1.7; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 48px 24px 64px; }
+  h1 { font-size: 34px; color: #fff; margin-bottom: 8px; }
+  .date { color: #8b949e; margin-bottom: 32px; }
+  h2 { font-size: 22px; margin: 32px 0 12px; color: #fff; }
+  p, li { color: #c9d1d9; margin: 10px 0; }
+  ul { margin-left: 24px; }
+  a { color: #58a6ff; }
+  nav { margin-bottom: 32px; }
+  nav a { color: #58a6ff; text-decoration: none; font-weight: 600; }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a href="index.html">&larr; Back to AutoClips home</a></nav>
+  <h1>Privacy Policy</h1>
+  <p class="date">Effective date: September 20, 2026</p>
+
+  <p>AutoClips ("the app") is a free Windows desktop application that automatically records gameplay clips. This policy explains what information the app handles, how it is used, and what never leaves your computer.</p>
+
+  <h2>1. The short version</h2>
+  <p>AutoClips is <strong>local-first</strong>. Your clips, settings, and credentials are stored on your own PC. The app sends data over the internet only in three cases you explicitly enable: uploading a clip to <strong>your Discord channel</strong>, uploading a clip to <strong>your YouTube channel</strong>, and checking GitHub for app updates. The developer receives no data from you — there is no account system, no analytics, no telemetry, and no advertising.</p>
+
+  <h2>2. Information stored on your device</h2>
+  <ul>
+    <li><strong>Video clips:</strong> recorded gameplay is saved as MP4 files on your computer in the folder you choose. Clips stay on your PC unless you enable Discord or YouTube uploads.</li>
+    <li><strong>App settings:</strong> your player name, audio devices, clip length, and preferences are stored in a local settings file.</li>
+    <li><strong>Google OAuth tokens:</strong> if you sign in with Google to enable YouTube uploads, the app receives OAuth tokens from Google. These tokens are stored on your PC encrypted with Windows Data Protection (DPAPI), which ties them to your Windows user account. They are used solely to upload videos you choose to your own YouTube channel.</li>
+    <li><strong>Discord webhook URL:</strong> if you enable Discord uploads, the webhook URL you paste into Settings is stored on your PC encrypted with Windows Data Protection (DPAPI). It is used solely to deliver clips to your Discord channel.</li>
+  </ul>
+
+  <h2>3. Voice commands</h2>
+  <p>The optional voice-backup feature listens for the phrase "AutoClip this" through the microphone you select. Speech recognition is performed <strong>entirely on your PC</strong> using Windows speech services. No audio is transmitted to the developer or any third party for this feature.</p>
+
+  <h2>4. Screen analysis</h2>
+  <p>Kill detection works by analyzing your game window with on-device optical character recognition (Tesseract OCR). All image analysis happens locally on your PC. No screenshots or screen content are transmitted anywhere.</p>
+
+  <h2>5. Network connections the app makes</h2>
+  <ul>
+    <li><strong>YouTube uploads (only if you enable them and sign in):</strong> the app connects to Google's servers to upload the clips you choose to your own YouTube channel, using the <code>youtube.upload</code> scope. Google's handling of that data is governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. AutoClips' use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</li>
+    <li><strong>Discord uploads (only if you enable them):</strong> the app sends clips to the Discord webhook URL you provided. Discord's handling of that data is governed by the <a href="https://discord.com/privacy">Discord Privacy Policy</a>.</li>
+    <li><strong>Update checks:</strong> on startup the app may fetch a small version file from GitHub (<code>raw.githubusercontent.com</code>) to tell you when a new release is available. No personal data is sent with this request.</li>
+  </ul>
+
+  <h2>6. What we do NOT collect</h2>
+  <ul>
+    <li>No analytics or usage telemetry of any kind.</li>
+    <li>No advertising identifiers or ad tracking.</li>
+    <li>No account registration — there is nothing to sign up for with the developer.</li>
+    <li>Your clips, credentials, and settings are never sent to the developer.</li>
+  </ul>
+
+  <h2>7. Your controls</h2>
+  <ul>
+    <li><strong>Delete clips</strong> at any time from your clips folder or through the app.</li>
+    <li><strong>YouTube:</strong> use Sign Out in the app to delete locally stored Google tokens, and revoke the app's access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    <li><strong>Discord:</strong> remove or replace your webhook URL in Settings, or delete the webhook in your Discord channel settings.</li>
+    <li><strong>Uninstalling</strong> the app removes the program; delete the clips folder and settings to remove all remaining local data.</li>
+  </ul>
+
+  <h2>8. Data retention</h2>
+  <p>Clips are kept on your PC until you delete them. Google OAuth tokens persist until you sign out in the app or revoke access in your Google Account. The Discord webhook URL persists until you remove it. The developer retains nothing because nothing is transmitted to the developer.</p>
+
+  <h2>9. Children</h2>
+  <p>AutoClips is not directed at children under 13, and we do not knowingly collect personal information from children.</p>
+
+  <h2>10. Changes to this policy</h2>
+  <p>If this policy changes, the updated version will be posted at this URL with a new effective date. Material changes will also be noted in the app's release notes on GitHub.</p>
+
+  <h2>11. Contact</h2>
+  <p>Questions about this policy: open an issue at <a href="https://github.com/richardszachary35-boop/autoclipper/issues">github.com/richardszachary35-boop/autoclipper/issues</a>.</p>
+
+  <footer>
+    <a href="index.html" style="color:#58a6ff; text-decoration:none; margin-right:16px;">Home</a>
+    <a href="terms.html" style="color:#58a6ff; text-decoration:none;">Terms of Service</a>
+    <p style="margin-top:12px;">&copy; 2026 AutoClips</p>
+  </footer>
+</div>
+</body>
+</html>
